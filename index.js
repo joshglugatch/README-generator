@@ -25,11 +25,6 @@ function promptUser(){
         },
         {
             type: "input",
-            name: "repository",
-            message: "What is your repository name?"
-        },
-        {
-            type: "input",
             name: "title",
             message: "What is your project title?"
         },
@@ -81,6 +76,10 @@ function generateMD(response){
     }else{
         response.license = "None"
     }
+    response.installations = "```" + response.installations + "```";
+    response.tests = "```" + response.tests + "```";
+    
+
     return`# ${response.title} 
 
 ${response.description}
@@ -93,7 +92,7 @@ ${response.description}
 * [Tests](#tests)
 * [Questions](#questions)
 
-### Installations:
+### Installation:
 In order to install the necessary dependencies, open the console and run the following:
 
 ${response.installations}
@@ -102,30 +101,34 @@ ${response.installations}
 ${response.usage}
 
 ### License:
-This project is licensed under 
+This project is licensed under:
+
 ${response.license}
 
 ### Contributing:
 ${response.contribute}
 
 ### Tests:
+In order to test open the console and run the following:
+
 ${response.tests}
 
 ### Questions:
 
 
 ### Author:
-${response.author}
+${response.author}, ${response.email}
 
+![picture](https://github.com/${response.username}.png?size=80)
     
-    `
+ `
 }
 
 promptUser().then(function(response){
     const markdown = generateMD(response);
     return writeFileAsync("README.md", markdown);
-}).then(function(){
-    console.log("Generating README.md ...")
-}).catch(function(err){
+}).then(function () {
+        console.log("Generating README.md ...");
+    }).catch(function(err){
     console.log(err)
 })
