@@ -1,6 +1,6 @@
-# asdfasdfa 
+# README Generator  ![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)
 
-no
+We are using inquirer to prompt user for info through node.js and we can generate a README.
 
 ## Table of Contents:
 * [Installation](#installation)
@@ -13,27 +13,27 @@ no
 ### Installation:
 In order to install the necessary dependencies, open the console and run the following:
 
-```asdfadsfa```
+```npm install```
 
 ### Usage:
-asadfadsf
+The generator will overwrite anything in the generatedREADME markdown file. Make sure to move any changes you may want to keep.
 
 ### License:
 This project is licensed under:
 
-None
+MIT
 
 ### Contributing:
-asdfasf
+No contributions at this time.
 
 ### Tests:
 In order to test open the console and run the following:
 
-```asdfasdf```
+```npm run test```
 
 ### Questions:
 If you have any questions contact me on [GitHub](https://github.com/joshglugatch) or contact 
-Josh at joshglugatcH@gfmailcasd
+Josh Glugatch at joshglugatch@gmail.com
 
 ![picture](https://github.com/joshglugatch.png?size=80)
     

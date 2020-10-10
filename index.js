@@ -65,22 +65,20 @@ function promptUser(){
 
 
 function generateMD(response){
+    let badge = "";
     if(response.license == "MIT"){
-        response.license = "[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)"
+        badge = "![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)"
     }else if (response.license == "APACHE 2.0"){
-        response.license = "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+        badge = "![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)"
     }else if (response.license == "GPL 3.0"){
-        response.license = "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)"
+        badge = "![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)"
     }else if (response.license == "BSD 3"){
-        response.license = "[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)"
-    }else{
-        response.license = "None"
+        badge = "![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)"
     }
-    response.installations = "```" + response.installations + "```";
-    response.tests = "```" + response.tests + "```";
+    
     
 
-    return`# ${response.title} 
+    return`# ${response.title}  ${badge}
 
 ${response.description}
 
@@ -95,7 +93,7 @@ ${response.description}
 ### Installation:
 In order to install the necessary dependencies, open the console and run the following:
 
-${response.installations}
+\`\`\`${response.installations}\`\`\`
 
 ### Usage:
 ${response.usage}
@@ -111,13 +109,11 @@ ${response.contribute}
 ### Tests:
 In order to test open the console and run the following:
 
-${response.tests}
+\`\`\`${response.tests}\`\`\`
 
 ### Questions:
-
-
-### Author:
-${response.author}, ${response.email}
+If you have any questions contact me on [GitHub](https://github.com/${response.username}) or contact 
+${response.author} at ${response.email}
 
 ![picture](https://github.com/${response.username}.png?size=80)
     
@@ -126,7 +122,7 @@ ${response.author}, ${response.email}
 
 promptUser().then(function(response){
     const markdown = generateMD(response);
-    return writeFileAsync("README.md", markdown);
+    return writeFileAsync("./generated/generatedREADME.md", markdown);
 }).then(function () {
         console.log("Generating README.md ...");
     }).catch(function(err){
