@@ -2,7 +2,7 @@
 Welcome to README Generator. README Generator will help users to create a readme using our template and the info the user inputs.
 By using the inquirer npm we can gather info through node.js to build a readme for the user. The user will be asked for their project name, GitHub name, details, application instructions, etc. This info will be filled into the README Generator template and write the readme into the generatedREADME markdown file inside of the generated folder. It will contain a title, description, table of contents, installation instructions,
 
-![demo](READMEgenerator.mp4)
+<div style="height: 0; padding-bottom: calc(56.25% + 35px); position:relative; width: 100%;"><iframe allow="autoplay; gyroscope;" allowfullscreen height="100%" referrerpolicy="strict-origin" src="https://www.kapwing.com/e/5f811bb6a38ce0007769118b" style="border:0; height:100%; left:0; overflow:hidden; position:absolute; top:0; width:100%" title="Embedded content made with Kapwing" width="100%"></iframe></div>
 
 
 
