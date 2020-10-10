@@ -1,8 +1,8 @@
 # README Generator  ![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)
 Welcome to README Generator. README Generator will help users to create a readme using our template and the info the user inputs.
-By using the inquirer npm we can gather info through node.js to build a readme for the user. The user will be asked for their project name, GitHub name, details, application instructions, etc. This info will be filled into the README Generator template and write the readme into the generatedREADME markdown file inside of the generated folder. It will contain a title, description, table of contents, installation instructions,
+By using the inquirer npm we can gather info through node.js to build a readme for the user. The user will be asked for their project name, GitHub name, details, application instructions, etc. This info will be filled into the README Generator template and write the readme into the generatedREADME markdown file inside of the generated folder. It will contain a title, description, table of contents, installation instructions, etc.
 
-For a walkthrough on using the app click [here.](https://kapwi.ng/c/gkeWv86e)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LRUqN-3SrFA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 
